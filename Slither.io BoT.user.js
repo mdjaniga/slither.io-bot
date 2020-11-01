@@ -1175,20 +1175,20 @@ var userInterface = window.userInterface = (function() {
             oContent.push('Autor: ' + GM_info.script.author);
             oContent.push('Wersja: ' + GM_info.script.version);
             oContent.push('');
-            oContent.push('[T] Włącz/Wyłącz bota - ' + ht(bot.stanBota));
+            oContent.push('[T] Enable/Disable bot - ' + ht(bot.stanBota));
             oContent.push('[O] Skin mobilny - ' + ht(window.skinMobilny));
-            oContent.push('[A/S] Mnożnik promienia - ' + bot.opt.mnoznikPromienia);
-            oContent.push('[D] Zmiana promienia - ' + bot.opt.zmianaPromieniaPlus + '/' + bot.opt.zmianaPromieniaMinus);
+            oContent.push('[A/S] Radius multiplier - ' + bot.opt.mnoznikPromienia);
+            oContent.push('[D] Change multiplier - ' + bot.opt.zmianaPromieniaPlus + '/' + bot.opt.zmianaPromieniaMinus);
             oContent.push('[I] Auto respawn - ' + ht(window.autoRespawn));
-            oContent.push('[G] Ukryj nicki: ' + ht(window.ukrywanieNickow));
-            oContent.push('[Y] Wizualny promień: ' + ht(window.wizualnyPromien));
-            oContent.push('[U] Log debugowanie: ' + ht(window.logDebugowanie));
-            oContent.push('[H] Włącz/Wyłącz panel');
-            oContent.push('[B] Zmień tło');
-            oContent.push('[SCROLL] Powiększ +/-');
-            oContent.push('[Z] Domyślne powiększenie');
-            oContent.push('[ESC] Szybki respawn');
-            oContent.push('[Q] Wyjście do menu');
+            oContent.push('[G] Hide Nicknames: ' + ht(window.ukrywanieNickow));
+            oContent.push('[Y] Visual Ray: ' + ht(window.wizualnyPromien));
+            oContent.push('[U] Log Debug: ' + ht(window.logDebugowanie));
+            oContent.push('[H] On/Off panel');
+            oContent.push('[B] Change Background');
+            oContent.push('[SCROLL] Zoom +/-');
+            oContent.push('[Z] Default Zoom');
+            oContent.push('[ESC] Auto respawn');
+            oContent.push('[Q] Exit to Menu');
 
             userInterface.overlays.prefOverlay.innerHTML = oContent.join('<br/>');
         },
