@@ -1298,7 +1298,7 @@ var userInterface = window.userInterface = (function() {
 
         handleTextColor: function(enabled) {
             return '<span style=\"color:' +
-                (enabled ? 'green;\">włączony' : 'red;\">wyłączony') + '</span>';
+                (enabled ? 'green;\">Enabled' : 'red;\">Disabled') + '</span>';
         }
     };
 })();
