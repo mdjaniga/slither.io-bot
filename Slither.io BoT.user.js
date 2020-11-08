@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Slither.io BoT
 // @namespace    http://slither.io/
-// @version      1.0
+// @version      1.1
 // @description  Slither.io BoT
 // @author       Ciastuuś
 // @match        http://slither.io/
