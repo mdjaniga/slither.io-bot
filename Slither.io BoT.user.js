@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Slither.io BoT
 // @namespace    http://slither.io/
-// @version      1.1
+// @version      1.2
 // @description  Slither.io BoT
 // @author       Ciastuuś
 // @match        http://slither.io/
@@ -1200,14 +1200,13 @@ var userInterface = window.userInterface = (function() {
             if (window.playing && window.snake !== null) {
                 oContent.push('FPS: ' + userInterface.framesPerSecond.fps);
 
-
-                oContent.push('Pozycja X: ' +
-                    (Math.round(window.snake.xx) || 0) + ' Pozycja Y: ' +
+                oContent.push('Position X: ' +
+                    (Math.round(window.snake.xx) || 0) + ' Position Y: ' +
                     (Math.round(window.snake.yy) || 0));
 
                 if (window.goalCoordinates) {
-                    oContent.push('Cel');
-                    oContent.push('Pozycja X: ' + window.goalCoordinates.x + ' Pozycja Y: ' +
+                    oContent.push('Objective');
+                    oContent.push('Position X: ' + window.goalCoordinates.x + ' Position Y: ' +
                         window.goalCoordinates.y);
                     if (window.goalCoordinates.sz) {
                         oContent.push('Gracze: ' + window.goalCoordinates.sz);
@@ -1230,6 +1229,11 @@ var userInterface = window.userInterface = (function() {
                         x: window.snake.xx,
                         y: window.snake.yy
                     };
+                var heading = {
+                    x: window.snake.xx + 500 * bot.cos,
+                    y: window.snake.yy + 500 * bot.sin
+                };
+                    canvasUtil.drawCircle(heading, 'blue', true);
                     canvasUtil.drawLine(
                         headCoord,
                         window.goalCoordinates,
